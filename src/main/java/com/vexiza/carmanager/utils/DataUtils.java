@@ -9,7 +9,7 @@ import java.util.stream.Collectors;
 public class DataUtils {
 
     public static CarDto mapToDto(Car car){
-        return new CarDto(car.getCode(), car.getName(), car.getIntake(), car.getMaxSpeed(), car.getPurchaseDate(), car.getCarType());
+        return new CarDto(car.getId(), car.getCode(), car.getName(), car.getIntake(), car.getMaxSpeed(), car.getPurchaseDate(), car.getCarType());
     }
 
     public static List<CarDto> mapToDtos(List<Car> cars){

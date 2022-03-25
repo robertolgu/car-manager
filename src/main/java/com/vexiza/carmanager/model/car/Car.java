@@ -10,7 +10,7 @@ public class Car implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(nullable = false, updatable = false)
-    private Long id;
+    private Integer id;
     @Column(nullable = false, updatable = false)
     private String code;
     private String name;
@@ -33,11 +33,11 @@ public class Car implements Serializable {
         this.carType = carType;
     }
 
-    public Long getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 

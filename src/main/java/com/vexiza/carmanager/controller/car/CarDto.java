@@ -7,6 +7,7 @@ import java.util.Date;
 
 public class CarDto implements Serializable {
 
+    private Integer id;
     private String code;
     private String name;
     private Float intake;
@@ -18,7 +19,8 @@ public class CarDto implements Serializable {
         super();
     }
 
-    public CarDto(String code, String name, Float intake, Integer maxSpeed, Date purchaseDate, CarType carType) {
+    public CarDto(Integer id, String code, String name, Float intake, Integer maxSpeed, Date purchaseDate, CarType carType) {
+        this.id = id;
         this.code = code;
         this.name = name;
         this.intake = intake;
@@ -75,10 +77,19 @@ public class CarDto implements Serializable {
         this.carType = carType;
     }
 
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
+
     @Override
     public String toString() {
         return "CarDto{" +
-                "code='" + code + '\'' +
+                "id=" + id +
+                ", code='" + code + '\'' +
                 ", name='" + name + '\'' +
                 ", intake=" + intake +
                 ", maxSpeed=" + maxSpeed +
